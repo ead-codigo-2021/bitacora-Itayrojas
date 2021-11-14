@@ -1,3 +1,358 @@
-h1{
-    color:blueviolet
+:root{
+--font-family-alt:'Urbanist', sans-serif;
 }
+
+.container-grilla{
+  display:grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  row-gap:40px;
+  column-gap: 40px;
+  }
+
+body{
+  margin: 100px;
+  font-family:'Urbanist',sans-serif;
+  background: var(--body-bg-color);
+  color: var(--text-color);
+  background: rgb(252,93,146);
+background: linear-gradient(149deg, rgb(255, 138, 177) 0%, rgb(252, 142, 160) 27%, rgba(93,252,104,1) 100%);
+}
+
+/*Header*/
+.container-header{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  
+  }
+
+  h1{ 
+    font-family: var(--font-family-alt); 
+    font-size:40px;
+    font-weight:bolder;
+    color:white;
+   margin:50px;
+   
+ }
+
+header{
+  background: rgb(0,0,0);
+  background: linear-gradient(149deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2976540958180147) 100%);
+  overflow:hidden;
+  margin-top: 5px;
+}
+
+/*menu*/
+
+.container-menu{
+grid-column-start:1;
+grid-column-end: 6;
+grid-row-start: 1;
+grid-row-end:1;
+margin-top:100px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: right;
+  font-size: 30px;
+  
+}
+
+.menu li {
+  margin-right: 70px;
+ 
+}
+
+.menu a {
+  position: relative;
+  display: block;
+  padding: 5px;
+ 
+}
+
+.menu a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #15ff00, #94ff86, #eeeeee);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+.menu a:hover::before {
+  transform: scaleX(1);
+}
+
+/*Bienvenida*/
+.container-bienvenida{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-top: 200px;
+
+}
+
+p.texto-bienvenida{
+  font-family:'Montserrat';
+  color:rgba(255, 255, 255, 1);
+  font-size:30px;
+}
+
+/*Carrusel*/
+
+.container-carrusel{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  
+}
+
+.slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(58, 3, 129, 0.64);
+    margin-top:100px;
+    height:495px;
+    width:100%;
+    
+  }
+  
+  .slide-inner {
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc( 450px + 3em);
+  }
+  
+  .slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+  }
+  
+  .slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+  
+  .slide-item img {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .slide-control {
+    background: black;
+    border-radius: 60%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 50px;
+    height: 50px;
+    line-height: 45px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 50px;
+    z-index: 10;
+  }
+  
+  .slide-control.prev {
+    left: 2%;
+  }
+  
+  .slide-control.next {
+    right: 2%;
+  }
+  
+  .slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+  }
+  
+  #slide-1:checked ~ .control-1,
+  #slide-2:checked ~ .control-2,
+  #slide-3:checked ~ .control-3 {
+    display: block;
+  }
+  
+  .slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  .slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+  }
+  
+  .slide-circulo:hover {
+    color: #aaaaaa;
+  }
+  
+  #slide-1:checked ~ .control-1 ~ .slide-indicador li:nth-child(1) .slide-circulo,
+  #slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo,
+  #slide-3:checked ~ .control-3 ~ .slide-indicador li:nth-child(3) .slide-circulo {
+    color: #428bca;
+  }
+  
+  #titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+  }
+  
+ /* Footer */
+
+.footer-container{
+grid-column-start: 1;
+grid-column-end: 6;
+grid-row-start: 5;
+grid-row-end: 7;
+}
+
+.footer-dark {
+  margin-top:5%;
+  padding:80px 80px;
+  color:white;
+  background: rgba(0, 0, 0, 0.829);
+  font-family: 'Urbanist';
+  }
+  
+  .footer-dark h3 {
+  margin-top:10px;
+  margin-bottom:10px;
+  font-weight:bold;
+  font-size:20px;
+  
+  
+  }
+  
+  .footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.5;
+  font-size:20px;
+  margin-bottom:0;
+  
+  }
+  
+  .footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+  opacity:0.8;
+  }
+  
+  @media (max-width:800px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+  }
+  
+  .footer-dark .item.text {
+  margin-bottom:35px;
+  }
+  
+  @media (max-width:800px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+  }
+  
+  .footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+  text-align:center;
+  }
+  
+  @media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:10px;
+  }
+  }
+  
+  .footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:10px;
+  color:#fff;
+  }
+  
+  .footer-dark .item.social > a:hover {
+  opacity:0.9;
+  }
+  
+  .footer-dark .copyright {
+  text-align:center;
+  padding-top:25px;
+  font-size:15px;
+  margin-bottom:0;
+  }
+  
+  .container-grid {
+  column-count: 3;
+  column-gap: 50px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  
+   }
