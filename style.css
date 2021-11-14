@@ -140,7 +140,7 @@ p.texto-bienvenida{
     position:relative;
     overflow: hidden;
     width: 100%;
-    height: calc( 450px + 3em);
+    height: calc( 425px + 3em);
   }
   
   .slide-open:checked + .slide-item {
