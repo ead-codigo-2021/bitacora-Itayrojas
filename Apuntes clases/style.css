@@ -1,0 +1,125 @@
+:root{
+
+    --font-family-base:'Anton', sans-serif;
+    --font-family-alt:'Urbanist', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+    margin: 100px;
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    background: rgb(252,93,146);
+  background: linear-gradient(149deg, rgb(255, 138, 177) 0%, rgb(252, 142, 160) 27%, rgba(93,252,104,1) 100%);
+}
+
+.section{
+  display:flex;
+  width: 100%;
+  height:100%;
+  justify-content: space-evenly;
+  align-items: left;
+}
+
+.Clases{
+  
+  width: 70%;
+    height: 100%;
+    margin: 10px;
+    padding: 2rem;
+    font-size: 15px;
+    color: black;
+    background: rgb(0,0,0);
+  background: linear-gradient(149deg, rgb(255, 251, 251) 0%, rgba(255, 255, 255, 0.493) 100%);
+  }
+
+  header{
+   margin-left:-30px;
+    overflow:hidden;
+    width: 70%;
+    height: 100%;
+  }
+
+
+  /*menu*/
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    
+  }
+  
+  .menu li {
+    margin-right: 70px;
+   
+  }
+  
+  .menu a {
+    position: relative;
+    display: block;
+    padding: 5px;
+   
+  }
+  
+  .menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #15ff00, #94ff86, #eeeeee);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    
+  }
+  
+  .menu a:hover::before {
+    transform: scaleX(1);
+  }
+
+  /*estilos texto*/
+  h1{
+    font-family:'Urbanist';
+    font-weight: bold;
+  color:rgb(255, 255, 255);
+  font-size:50px;
+  margin:50px;
+  }
+ 
+  p.titulo{
+    font-family:'Urbanist';
+    font-weight: bold;
+  color:rgb(0, 0, 0);
+  font-size:30px;
+  }
+
+  p.Subtitulo{
+    font-family:'Montserrat';
+    font-weight:600;
+    font-style: italic;
+color:#0da000;
+  font-size:20px;
+  }
+
+  p.texto{
+    font-family:'Montserrat';
+    color:rgb(0, 0, 0);
+  font-size:15px;
+  }
