@@ -141,6 +141,7 @@ p.texto-bienvenida{
     overflow: hidden;
     width: 100%;
     height: calc( 425px + 3em);
+    background: white;
   }
   
   .slide-open:checked + .slide-item {
