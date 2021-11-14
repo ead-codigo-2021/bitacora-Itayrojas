@@ -141,7 +141,7 @@ p.texto-bienvenida{
     position:relative;
     overflow: hidden;
     width: 100%;
-    height: calc( 425px + 3em);
+    height: calc( 415px + 3em);
     background: white;
   }
   
