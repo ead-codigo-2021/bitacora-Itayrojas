@@ -66,7 +66,7 @@ a {
 .menu {
   display: flex;
   justify-content: right;
-  font-size: 30px;
+  font-size: 20px;
   
 }
 
@@ -140,7 +140,7 @@ p.texto-bienvenida{
     position:relative;
     overflow: hidden;
     width: 100%;
-    height: calc( 450px + 3em);
+    height: calc( 400px + 3em);
   }
   
   .slide-open:checked + .slide-item {
